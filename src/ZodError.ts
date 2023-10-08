@@ -261,10 +261,10 @@ export class ZodError<T = any> extends Error {
     return fieldErrors;
   }
 
-  static create = (issues: ZodIssue[]) => {
+  static create(issues: ZodIssue[]) {
     const error = new ZodError(issues);
     return error;
-  };
+  }
 
   toString() {
     return this.message;
